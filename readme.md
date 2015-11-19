@@ -1,6 +1,6 @@
 # find-versions-cli [![Build Status](https://travis-ci.org/sindresorhus/find-versions-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/find-versions-cli)
 
-> Find semver versions in a string: `unicorn v1.2.3.` → `1.2.3`
+> Find semver versions in a string: `unicorn v1.2.3` → `1.2.3`
 
 
 ## Install
@@ -23,7 +23,7 @@ $ find-versions-cli --help
     --all    Return all matches instead of just the first
     --loose  Match non-semver versions like 1.88
 
-  Examples',
+  Examples
     $ find-versions 'unicorn v1.2.3'
     1.2.3
     $ curl --version | find-versions

@@ -13,7 +13,7 @@ const cli = meow(`
 	  --all    Return all matches instead of just the first
 	  --loose  Match non-semver versions like 1.88
 
-	Examples',
+	Examples
 	  $ find-versions 'unicorn v1.2.3'
 	  1.2.3
 	  $ curl --version | find-versions
