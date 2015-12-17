@@ -13,7 +13,7 @@ $ npm install --global find-versions-cli
 ## Usage
 
 ```
-$ find-versions-cli --help
+$ find-versions --help
 
   Usage
     $ find-versions <input> [--first] [--loose]
