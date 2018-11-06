@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 'use strict';
-const getStdin = require('get-stdin');
 const meow = require('meow');
-const fn = require('find-versions');
+const getStdin = require('get-stdin');
+const findVersions = require('find-versions');
 
 const cli = meow(`
 	Usage
@@ -19,13 +19,15 @@ const cli = meow(`
 	  $ curl --version | find-versions
 	  7.30.0
 `, {
-	string: ['_']
+	flags: {
+		all: {
+			type: 'boolean'
+		},
+		loose: {
+			type: 'boolean'
+		}
+	}
 });
-
-function init(data) {
-	const ret = fn(data, {loose: cli.flags.loose});
-	console.log(cli.flags.all ? ret.join('\n') : ret[0]);
-}
 
 const input = cli.input[0];
 
@@ -34,8 +36,9 @@ if (!input && process.stdin.isTTY) {
 	process.exit(1);
 }
 
-if (input) {
-	init(input);
-} else {
-	getStdin().then(init);
-}
+(async () => {
+	const data = input ? input : await getStdin();
+	const versions = findVersions(data, {loose: cli.flags.loose});
+
+	console.log(cli.flags.all ? versions.join('\n') : versions[0]);
+})();
