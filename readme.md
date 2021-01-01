@@ -1,4 +1,4 @@
-# find-versions-cli [![Build Status](https://travis-ci.com/sindresorhus/find-versions-cli.svg?branch=master)](https://travis-ci.com/sindresorhus/find-versions-cli)
+# find-versions-cli
 
 > Find semver versions in a string: `unicorn v1.2.3` → `1.2.3`
 
