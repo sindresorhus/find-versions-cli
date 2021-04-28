@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const findVersions = require('find-versions');
+import meow from 'meow';
+import findVersions from 'find-versions';
 
 const cli = meow(`
 	Usage

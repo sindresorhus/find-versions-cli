@@ -4,13 +4,11 @@
 
 Check out [`bin-version-cli`](https://github.com/sindresorhus/bin-version-cli) if you need to find the version of a binary.
 
-
 ## Install
 
 ```
 $ npm install --global find-versions-cli
 ```
-
 
 ## Usage
 
@@ -31,13 +29,7 @@ $ find-versions --help
   Exits with code 2 if it could not find any versions
 ```
 
-
 ## Related
 
 - [find-versions](https://github.com/sindresorhus/find-versions) - API for this module
 - [bin-version-cli](https://github.com/sindresorhus/bin-version-cli) - Get the version of a binary in semver format
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
